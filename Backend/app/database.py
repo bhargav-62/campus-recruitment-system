@@ -1,4 +1,6 @@
+import os
 import pymysql
+import certifi
 
 from app.config import (
     DB_HOST,
@@ -10,11 +12,15 @@ from app.config import (
 
 
 def get_connection():
+
     return pymysql.connect(
         host=DB_HOST,
         port=DB_PORT,
         user=DB_USER,
         password=DB_PASSWORD,
         database=DB_NAME,
-        cursorclass=pymysql.cursors.DictCursor
+        cursorclass=pymysql.cursors.DictCursor,
+        ssl={
+            "ca": certifi.where()
+        }
     )
