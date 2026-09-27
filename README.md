@@ -1,34 +1,138 @@
-# Campus Recruitment & Eligibility Management System (CREMS)
+# 🚀 CREMS — Campus Recruitment & Eligibility Management System
 
-A full-stack web application for managing campus recruitment, student profiles, job opportunities, eligibility verification, applications, and recruitment status tracking.
+A full-stack web-based platform for managing campus recruitment, student profiles, job opportunities, eligibility checking, applications, and recruitment status tracking.
 
-## 🚀 Overview
+CREMS provides separate workflows for **students and administrators**, with a Flask REST API backend, React frontend, JWT-based authentication, and a MySQL-compatible cloud database.
 
-CREMS is designed to simplify the campus recruitment process by connecting students, job opportunities, eligibility rules, and administrators through a centralized system.
+---
 
-The system provides:
+## 🌐 Live Application
 
-- Student registration and authentication
-- Student profile management
-- Education, skills, projects, certifications and internship management
-- Job opportunity management
-- Automated eligibility checking
-- Job applications
-- Application status tracking
-- Application history
-- Admin recruitment dashboard
-- JWT-based authentication and role-based access control
-- REST API documentation using Swagger
+### 🔗 Live Website
+https://campus-recruitment-system-hcskgox7z.vercel.app
 
-## 🏗️ System Architecture
+### 🔗 Backend API
+https://campus-recruitment-system-sn3d.onrender.com
+
+### 📚 API Documentation
+http://127.0.0.1:5000/apidocs/
+
+> The Swagger URL above is available when running the backend locally.
+
+---
+
+## 📌 Project Overview
+
+CREMS was developed to simplify and centralize the campus recruitment process.
+
+The system allows students to:
+
+- Create and manage their recruitment profile
+- Add education details
+- Add technical skills
+- Add projects
+- Add certifications
+- Add internship experience
+- View available job opportunities
+- Check job eligibility
+- Apply for eligible jobs
+- Track application status
+- View application status history
+
+Administrators can:
+
+- Manage student records
+- Create and manage job opportunities
+- Define job eligibility criteria
+- View applications
+- Update application statuses
+- View recruitment statistics
+- Monitor the overall recruitment process
+
+---
+
+# ✨ Key Features
+
+## 👨‍🎓 Student Features
+
+### 🔐 Authentication
+
+- Student registration
+- Student login
+- JWT-based authentication
+- Protected API endpoints
+- Role-based access control
+
+### 👤 Student Profile
+
+Students can manage:
+
+- Personal information
+- Education
+- Skills
+- Projects
+- Certifications
+- Internships
+
+### 💼 Job Opportunities
+
+Students can:
+
+- View available jobs
+- View job details
+- View eligibility requirements
+- Check their eligibility
+
+### 🎯 Smart Eligibility Checking
+
+CREMS evaluates student eligibility based on:
+
+- CGPA
+- Backlogs
+- Graduation year
+- Branch
+- Academic percentage
+- Required skills
+
+The system also provides missing eligibility information and missing skills when a student is not eligible.
+
+### 📝 Applications
+
+Students can:
+
+- Apply for jobs
+- View submitted applications
+- View application details
+- Track application status
+- View application status history
+
+---
+
+# 👨‍💼 Admin Features
+
+Administrators can:
+
+- View all students
+- View all jobs
+- Create jobs
+- Edit jobs
+- Delete jobs
+- Define eligibility rules
+- Update eligibility criteria
+- View all applications
+- Change application status
+- Add remarks to status changes
+- View recruitment statistics
+
+### Application Status Workflow
 
 ```text
-React.js Frontend
-       │
-       │ REST API
-       ▼
-Flask Backend
-       │
-       │ PyMySQL
-       ▼
-MySQL Database
+APPLIED
+   ↓
+SHORTLISTED
+   ↓
+ASSESSMENT
+   ↓
+INTERVIEW
+   ↓
+SELECTED
